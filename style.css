@@ -1,0 +1,121 @@
+@import url('https://googleapis.com');
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-blue-200: hsl(224, 100%, 95%);
+  --clr-blue-400: hsl(220, 100%, 64%);
+  --clr-blue-600: hsl(228, 100%, 60%);
+  --clr-blue-700: hsl(228, 95%, 58%);
+  --clr-black-overlay: hsla(0, 0%, 0%, 0.25);
+
+  --ff-main: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-main);
+  background-color: var(--clr-blue-700);
+  color: var(--clr-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.dashboard-container {
+  width: 90%;
+  max-width: 1110px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+/* Hero Content Styles */
+.hero-section .logo {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: var(--clr-blue-200);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--clr-blue-200);
+  opacity: 0.9;
+}
+
+/* ==========================================
+   4. STATS GRID & CARDS
+   ========================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  margin-bottom: 0.5rem;
+}
+
+.stat-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--clr-white);
+  margin-bottom: 0.5rem;
+}
+
+.stat-desc {
+  font-size: 14px;
+  color: var(--clr-blue-200);
+  opacity: 0.75;
+  line-height: 1.4;
+}
+
+
+.site-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 14px;
+  color: var(--clr-blue-200);
+  opacity: 0.6;
+}
+
+@media (min-width: 900px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3.75rem;
+    line-height: 1.1;
+  }
+}
